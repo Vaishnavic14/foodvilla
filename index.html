@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="icon">
+
+     <!-- Google Web Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Lora:wght@600;700&display=swap" rel="stylesheet"> 
+ 
+   <!-- Navbar Start -->
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+        <h1 class="fw-bold text-primary m-0">Food<span class="text-secondary">Vi</span>lla&hearts;</h1>
+    
+        <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <small><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small><br>
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>foodvilla@gmail.com</small>
+            </div>
+            
+        </div>
+    </div>
+
+     <!--end-->
+     <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+               <center> <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <a href="product.html" class="nav-item nav-link">Products</a>
+                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+            </div>
+        </center>
+            <div class="d-none d-lg-flex ms-2">
+                <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
+                    <small class="fa fa-search text-body"></small>
+                </a>
+                <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
+                    <small class="fa fa-user text-body"></small>
+                </a>
+                <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
+                    <small class="fa fa-shopping-bag text-body"></small>
+                </a>
+            </div>
+        </div>
+    </nav>
+        <hr>
+
+    <title>FoodVilla</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #efcdcd;
+            padding: 20px;
+
+        }
+        h1 {
+            text-align: center;
+            color: black;
+            size: 40px;
+            text-decoration: underline;
+            background-image:url("bgk.jpg");
+        }
+
+        /*nav bar*/
+        .top-bar {
+    height: 45px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    background-color: #f1adb0;
+    
+          }
+
+        /* Menu Section */
+        .menu {
+            display: grid;
+            justify-content: space-around;
+            grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+            gap: 35px; /* Space between items */
+            margin-bottom: 20px;
+        }
+        .menu-item {
+            background-color: white;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px,;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 200px;
+        }
+        .menu-item h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .menu-item p {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        .menu-item button {
+            padding: 10px;
+            background-color: #e50914;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Cart Section */
+        .cart {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .cart h3 {
+            margin-top: 0;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        /* Billing Section */
+        .billing {
+            margin-top: 30px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .billing input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .billing button {
+            width: 100%;
+            padding: 15px;
+            background-color: #e50914;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        /*** Footer ***/
+.footer {
+    color: #170909bb;
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #0b0404dd;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #0f0a0aea;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    color: var(--light);
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: var(--light);
+}
+
+.footer .copyright a:hover {
+    color: var(--primary);
+}
+    </style>
+</head>
+<body>
+
+<h1>Order Your Meal</h1>
+
+<!-- Menu Section -->
+<div class="menu">
+    <div class="menu-item">
+        <h2>Pizza</h2>
+        <img src="1.jpg" alt="Pizza">
+        <p>Rs 250/-</p>
+        <button onclick="addToCart('Pizza',250)">Add to Cart</button>
+    </div>
+    <div class="menu-item">
+        <h2>Burger</h2>
+        <img src="2.jpg" alt="Burger">
+        <p>Rs 150/-</p>
+        <button onclick="addToCart('Burger',150)">Add to Cart</button>
+    </div>
+    <div class="menu-item">
+        <h2>Pasta</h2>
+        <img src="3.jpg" alt="Pasta">
+        <p>Rs 170/-</p>
+        <button onclick="addToCart('Pasta',170)">Add to Cart</button>
+    </div> 
+
+     <div class="menu-item">
+            <h2>Momos</h2>
+            <img src="4.jpg" alt="Momos">
+            <p>Rs 150/-</p>
+            <button onclick="addToCart('Momos',150)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <h2>Pavbhaji</h2>
+            <img src="5.jpg" alt="Pavbhaji">
+            <p>Rs 190/-</p>
+            <button onclick="addToCart('Pavbhaji',190)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <h2>Paneer-Tikka</h2>
+            <img src="6.jpg" alt="Paneer-Tikka">
+            <p>Rs 210/-</p>
+            <button onclick="addToCart('Paneer-Tikka',210)">Add to Cart</button>
+        </div> 
+
+         <div class="menu-item">
+                <h2>Idli/Dosa</h2>
+                <img src="7n.jpg" alt="Idli/Dosa">
+                <p>Rs 140/-</p>
+                <button onclick="addToCart('Idli/Dosa',140)">Add to Cart</button>
+            </div>
+         <div class="menu-item"> 
+                <h2>Chocalate Ice-cream</h2>
+                <img src="8.jpg" alt="Chocalate">
+                <p>Rs 140/-</p>
+                <button onclick="addToCart('Chocalate',140)">Add to Cart</button>
+            </div>
+        <div class="menu-item">
+                <h2>Coofee</h2>
+                <img src="9.jpg" alt="Coofee">
+                <p>Rs 150/-</p>
+                <button onclick="addToCart('Coofee',150)">Add to Cart</button>
+            </div> 
+
+            <div class="menu-item">
+                    <h2>Pastry</h2>
+                    <img src="10.jpg" alt="Pastry">
+                    <p>Rs 140/-</p>
+                    <button onclick="addToCart('Pastry',140)">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <h2>Noodles</h2>
+                    <img src="11.jpg" alt="Noodles">
+                    <p>Rs 150/-</p>
+                    <button onclick="addToCart('Noodles',150)">Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <h2>Manchurian</h2>
+                    <img src="12.jpg" alt="Manchurian">
+                    <p>Rs 180/-</p>
+                    <button onclick="addToCart('Manchurian',180)">Add to Cart</button>
+    </div>
+</div>
+
+<!-- Cart Section -->
+<div class="cart" id="cart">
+    <h3>Your Cart</h3>
+    <div id="cart-items"></div>
+    <p><strong>Total:</strong> Rs <span id="total-price">0</span></p>
+</div>
+
+<!-- Billing Section -->
+<div class="billing">
+    <h3>Billing Details</h3>
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="text" id="address" placeholder="Delivery Address" required>
+    <input type="text" id="phone" placeholder="Phone Number" required>
+    <button onclick="placeOrder()">Place Order</button>
+</div>
+
+<script>
+// Initialize cart array
+let cart = [];
+
+// Add item to the cart
+function addToCart(item, price) {
+    cart.push({ item, price });
+    
+        alert("Item add to cart.");
+   
+    updateCart();
+}
+
+// Update cart and total
+function updateCart() {
+    const cartItemsDiv = document.getElementById("cart-items");
+    const totalPriceElement = document.getElementById("total-price");
+    
+    // Clear current cart
+    cartItemsDiv.innerHTML = '';
+
+    let totalPrice = 0;
+    cart.forEach((cartItem, index) => {
+        const itemDiv = document.createElement('div');
+        itemDiv.classList.add('cart-item');
+        itemDiv.innerHTML = `${cartItem.item} - Rs ${cartItem.price}`;
+        cartItemsDiv.appendChild(itemDiv);
+        totalPrice += cartItem.price;
+    });
+
+    totalPriceElement.textContent = totalPrice.toFixed(2);
+}
+
+// Place the order
+function placeOrder() {
+    const name = document.getElementById("name").value;
+    const address = document.getElementById("address").value;
+    const phone = document.getElementById("phone").value;
+
+    if (!name || !address || !phone) {
+        alert("Please fill in all billing details.");
+    
+        return;
+    }
+
+    alert(`Order placed successfully!\nTotal: Rs ${document.getElementById("total-price").textContent}`);
+    
+    // Clear cart and billing form
+    cart = [];
+    updateCart();
+    document.getElementById("name").value = '';
+    document.getElementById("address").value = '';
+    document.getElementById("phone").value = '';
+}
+</script>
+<!-- Footer Start -->
+<div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h1 class="fw-bold text-primary mb-4">Food<span class="text-secondary">Vi</span>lla</h1>
+                <p>We  offer a variety of food options, including sandwiches, salads, pastries, and coffee. Known for their cozy ambiance, they are ideal for casual dining, work, or socializing. With freshly prepared items and often unique flavors, cafés attract people seeking quick, delicious meals or a relaxed spot to unwind and connect.</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-square btn-outline-light rounded-circle me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Address</h4>
+                <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                <p><i class="fa fa-envelope me-3"></i>foodvilla@gmail.com</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Quick Links</h4>
+                <a class="btn btn-link" href="">Contact Us</a>
+                <a class="btn btn-link" href="">Our Services</a>
+                <a class="btn btn-link" href="">Terms & Condition</a>
+                <a class="btn btn-link" href="">Support</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Newsletter</h4>
+                <p>For more Details connect with us via sending emails and messages.</p>
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a href="#">FoodWood</a>, All Right Reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+</body>
+</html>
